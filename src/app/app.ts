@@ -17,4 +17,10 @@ export class App {
     console.log('Chat interface opened');
     this.router.navigate(['/chat']);
   }
+
+  openGitDiffSummary() {
+    // Logic to open the AI Git Diff Summary interface
+    console.log('AI Git Diff Summary interface opened');
+    this.router.navigate(['/ai-gitdiff-summary']);
+  }
 }

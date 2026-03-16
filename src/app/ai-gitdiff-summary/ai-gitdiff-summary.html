@@ -1,0 +1,12 @@
+<div>
+  <p>PR git diff summary!</p>
+  <textarea
+    [(ngModel)]="diffText"
+    placeholder="Enter git diff here..."
+    rows="10"
+    cols="50"
+  ></textarea>
+  <button (click)="summarizeDiff()">Summarize Diff</button>
+  <h3>AI Summary</h3>
+  <pre>{{ summary() }}</pre>
+</div>
