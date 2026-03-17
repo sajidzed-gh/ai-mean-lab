@@ -1,0 +1,11 @@
+.number-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.number {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}

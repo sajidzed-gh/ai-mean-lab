@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Message } from './chat/message';
 import { App } from './app';
 import { AiGitdiffSummary } from './ai-gitdiff-summary/ai-gitdiff-summary';
+import { AiGitdiffStream } from './ai-gitdiff-stream/ai-gitdiff-stream';
 
 export const routes: Routes = [
   // {
@@ -18,5 +19,10 @@ export const routes: Routes = [
     path: 'ai-gitdiff-summary',
     component: AiGitdiffSummary,
     title: 'AI Git Diff Summary',
+  },
+  {
+    path: 'ai-gitdiff-stream',
+    component: AiGitdiffStream,
+    title: 'AI Git Diff Stream',
   },
 ];
