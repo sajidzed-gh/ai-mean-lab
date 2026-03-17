@@ -243,8 +243,8 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title() }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <h3>Congratulations! Your app {{ title() }}, is running. 🎉</h3>
+      <p><router-outlet /></p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
@@ -288,6 +288,11 @@
       <div class="pill">
         <button (click)="openGitDiffSummary()" matButton="outlined" color="primary">
           AI "PR Summary-Git Diff" Panel for Developers
+        </button>
+      </div>
+      <div class="pill">
+        <button (click)="openGitDiffStream()" matButton="outlined" color="primary">
+          Stream AI "PR Summary-Git Diff" Panel for Developers
         </button>
       </div>
       <div class="social-links">
@@ -357,5 +362,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet />

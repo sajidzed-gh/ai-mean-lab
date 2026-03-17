@@ -23,4 +23,9 @@ export class App {
     console.log('AI Git Diff Summary interface opened');
     this.router.navigate(['/ai-gitdiff-summary']);
   }
+  openGitDiffStream() {
+    // Logic to open the AI Git Diff Stream interface
+    console.log('AI Git Diff Stream interface opened');
+    this.router.navigate(['/ai-gitdiff-stream']);
+  }
 }

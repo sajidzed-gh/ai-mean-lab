@@ -9,4 +9,20 @@
   <button (click)="summarizeDiff()">Summarize Diff</button>
   <h3>AI Summary</h3>
   <pre>{{ summary() }}</pre>
+  <button (click)="numbersStream()">Summarize as stream</button>
+  <hr />
+  <h3>AI Stream Summary</h3>
+  <div class="container">
+    <h2>Displaying 1 to 1000 (Chunked via Signals)</h2>
+
+    <div class="number-row">
+      @for (num of streamNumbers(); track num) {
+        <span class="number">{{ num }}</span>
+      }
+    </div>
+
+    @if (isLoading()) {
+      <p>Loading more numbers...</p>
+    }
+  </div>
 </div>

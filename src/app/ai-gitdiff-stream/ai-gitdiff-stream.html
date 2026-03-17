@@ -1,0 +1,16 @@
+<div class="chat-container">
+  <div class="input-group">
+    <div class="input-tip">Tip: run [git diff | clip] & paste here</div>
+    <div class="input-actions">
+      <input #promptInput type="text" placeholder="give git diff results to Groq..." />
+      <button (click)="streamService.streamDiff(promptInput.value)">Send</button>
+    </div>
+  </div>
+  <div class="response-area">
+    <p>{{ streamService.responseText() }}</p>
+
+    @if (streamService.isStreaming()) {
+      <span class="cursor">|</span>
+    }
+  </div>
+</div>
