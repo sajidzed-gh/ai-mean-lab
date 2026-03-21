@@ -1,0 +1,21 @@
+<p>WebSockets vs HTTP</p>
+<pre>
+| Aspect        | HTTP                         | WebSocket             |
+| ------------- | ---------------------------- | --------------------- |
+| Connection    | Short-lived                  | Persistent            |
+| Communication | Client → Server only         | Bi-directional        |
+| State         | Stateless                    | Stateful              |
+| Overhead      | High (headers every request) | Low (after handshake) |
+| Use case      | CRUD APIs                    | Real-time systems     |
+</pre>
+
+<div>
+  <h2>WebSocket Chat {{ msg }}</h2>
+  <div *ngFor="let message of msgs()">{{ message }} - {{ msgs().length }}</div>
+  <input [(ngModel)]="msg" placeholder="Type a message..." />
+  <button (click)="send()">Send</button>
+  <button (click)="close()">Close</button>
+
+  <div>Below is component: showing websocket component when broadcasting data recieved</div>
+  <app-consumer2-web-socket />
+</div>

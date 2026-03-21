@@ -9,6 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:node": "nodemon --watch server.js server.js",
+    "startWebSocket:node": "nodemon --watch serverWebSocket.js serverWebSocket.js",
     "prettier:check": "prettier --check \"**/*.{js,html,scss,ts,tsx,json,md,yml,yaml}\"",
     "prettier:fix": "prettier --write \"**/*.{js,html,scss,ts,tsx,json,md,yml,yaml}\""
   },
@@ -30,7 +31,8 @@
     "node-fetch": "^3.3.2",
     "nodemon": "^3.1.14",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "ws": "^8.19.0"
   },
   "devDependencies": {
     "@angular/build": "^21.2.1",

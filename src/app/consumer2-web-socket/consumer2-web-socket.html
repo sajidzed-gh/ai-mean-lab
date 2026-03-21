@@ -1,0 +1,16 @@
+<p>consumer2-web-socket</p>
+
+<div>
+  <div *ngFor="let m of msgs; let i = index">
+    <h2>{{ i + 1 }}: {{ m }}</h2>
+  </div>
+  <h2>last Value from Web Scoket {{ msg }}</h2>
+
+  <!-- <div *ngFor="let message of msgs">
+  {{ message }}
+
+</div> -->
+  <!-- <input [(ngModel)]="msg" placeholder="Type a message..." /> -->
+  <!-- <button (click)="send()">Send</button> -->
+  <button (click)="close()">Close</button>
+</div>
