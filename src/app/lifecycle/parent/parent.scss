@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  /* Creates three columns of equal width (1 fraction of available space) */
+  grid-template-columns: repeat(4, 1fr);
+  /* Adds space between the columns */
+  gap: 20px;
+}
+
+.item {
+  padding: 10px;
+  text-align: center;
+}

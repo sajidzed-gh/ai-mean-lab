@@ -4,6 +4,7 @@ import { App } from './app';
 import { AiGitdiffSummary } from './ai-gitdiff-summary/ai-gitdiff-summary';
 import { AiGitdiffStream } from './ai-gitdiff-stream/ai-gitdiff-stream';
 import { ChatWebSocket } from './chat-web-socket/chat-web-socket';
+import { Parent } from './lifecycle/parent/parent';
 
 export const routes: Routes = [
   // {
@@ -30,5 +31,10 @@ export const routes: Routes = [
     path: 'chat-web-socket',
     component: ChatWebSocket,
     title: 'WebSocket Chat',
+  },
+  {
+    path: 'lifecycle-hooks',
+    component: Parent,
+    title: 'Lifecycle Hooks',
   },
 ];

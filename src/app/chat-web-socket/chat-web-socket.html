@@ -11,7 +11,7 @@
 
 <div>
   <h2>WebSocket Chat {{ msg }}</h2>
-  <div *ngFor="let message of msgs()">{{ message }} - {{ msgs().length }}</div>
+  <div *ngFor="let message of msgs">{{ message }} - {{ msgs.length }}</div>
   <input [(ngModel)]="msg" placeholder="Type a message..." />
   <button (click)="send()">Send</button>
   <button (click)="close()">Close</button>

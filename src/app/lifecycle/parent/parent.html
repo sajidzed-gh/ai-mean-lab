@@ -1,0 +1,64 @@
+<h2>Parent Component</h2>
+<p>
+  <b
+    >Event happens → Change Detection <i>(the engine)</i> runs → Hooks execute-<i
+      >(checkpoints inside the engine)</i
+    >
+    → UI updates</b
+  >
+</p>
+<ol>
+  <li>constructor(once) → basic setup & dependency injection (no Angular-specific logic)</li>
+  <li>ngOnChanges(in input ref changes) → react to @Input() reference changes</li>
+  <li>ngOnInit(once) → run one-time initialization after inputs are set</li>
+  <li>ngDoCheck(every change detection cycle) → perform custom/manual change detection</li>
+  <li>
+    ngAfterContentInit(once) → act when projected content &lt;ng-content/&gt; is first available
+  </li>
+  <li>
+    ngAfterContentChecked(on every change detection cycle) → respond after each projected content
+    check
+  </li>
+  <li>ngAfterViewInit(once) → access/view child components or DOM after init</li>
+  <li>
+    ngAfterViewChecked(on every change detection cycle) → respond after each view check (avoid heavy
+    work)
+  </li>
+  <li>ngOnDestroy(once) → clean up subscriptions, timers, and resources</li>
+</ol>
+
+<div class="container">
+  <input
+    type="button"
+    class="item"
+    matButton="outlined"
+    color="primary"
+    value="Change name"
+    (click)="changeName()"
+  />
+  <input
+    type="button"
+    class="item"
+    matButton="outlined"
+    color="primary"
+    value="Increment age Mutable"
+    (click)="incrementAgeMuttable()"
+  />
+  <input
+    type="button"
+    class="item"
+    matButton="outlined"
+    color="primary"
+    value="Increment age Immutable"
+    (click)="incrementAgeImuttable()"
+  />
+  <input
+    type="button"
+    class="item"
+    matButton="outlined"
+    color="primary"
+    value="Toggle Child Component"
+    (click)="toggleChild()"
+  />
+</div>
+<app-child *ngIf="showChild" [user]="user"></app-child>

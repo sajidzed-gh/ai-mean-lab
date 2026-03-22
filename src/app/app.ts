@@ -33,4 +33,9 @@ export class App {
     console.log('WebSocket Chat interface opened');
     this.router.navigate(['/chat-web-socket']);
   }
+  openLifecycleHooks() {
+    // Logic to open the Lifecycle Hooks interface
+    console.log('Lifecycle Hooks interface opened');
+    this.router.navigate(['/lifecycle-hooks']);
+  }
 }

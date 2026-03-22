@@ -22,7 +22,8 @@ export class Consumer2WebSocket implements OnInit {
       console.log('4 consumer2: Received message in component: ', message);
       console.log('5 consumer2: before array msg: ', this.msg, this.msgs);
       this.msg = message + ' from consumer2';
-      this.msgs.push(message);
+      //this.msgs.push(message);
+      this.msgs = [...this.msgs, message];
       console.log('5 consumer2: after array msg: ', this.msg, this.msgs);
     });
   }
