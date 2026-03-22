@@ -10,6 +10,7 @@
     "test": "ng test",
     "start:node": "nodemon --watch server.js server.js",
     "startWebSocket:node": "nodemon --watch serverWebSocket.js serverWebSocket.js",
+    "start:nestjs": "npm run start:dev --prefix api",
     "prettier:check": "prettier --check \"**/*.{js,html,scss,ts,tsx,json,md,yml,yaml}\"",
     "prettier:fix": "prettier --write \"**/*.{js,html,scss,ts,tsx,json,md,yml,yaml}\""
   },
