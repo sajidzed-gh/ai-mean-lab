@@ -1,0 +1,7 @@
+Instructions to run MCP server & Client
+1. In terminal switch to api folder - CD api
+2. Run "npm run build"
+3. Run "npx tsc"
+4. Run "pm run start:mcpServer" 
+message "MCP Server is running..." should show up
+5. In another terminal run " npx ts-node src/ModelContextProtocol/mcpClient.ts"
