@@ -1,6 +1,8 @@
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { AppService } from './app.service';
 import express from 'express';
+import axios from 'axios';
+import 'dotenv/config';
 
 @Controller('app')
 export class AppController {
@@ -50,5 +52,34 @@ export class AppController {
         console.log('Unhandled event type:');
     }
     res.status(200).send('Webhook received'); // Respond to acknowledge receipt of the webhook
+  }
+
+  /**
+   * A GitHub-integrated pipeline that triggers on code push to extract filtered hunks,
+   *   performs AI-driven logic analysis via Gemini, and delivers real-time semantic insights 
+   *  to reviewers via email.
+   * 
+   * The reuest to this PATH should be made from gitHub webhook, via github's Push event 
+   * PostMan Sample Request 
+   * {
+      "repository": {
+          "full_name": "sajidzed-gh/ai-mean-lab"
+      },
+    "before": "f4eea5285f3a4c7a39a5d5fea07b82322ffe0d84",
+    "after": "d5f7241d77419efbbc721d1525d5ab45b581784b"
+    }
+
+   */
+  @Post('/github-webhook')
+  async gitHunkAI(@Req() req, @Res() res) {
+    try {
+      const formattedDiff = await this.appService.gitHubApi(req.body);
+
+      const aiExplanation = await this.appService.GroQAPi(formattedDiff);
+
+      res.status(200).send(`Automated analysis complete, ${aiExplanation}`);
+    } catch (err) {
+      res.status(500).send(`hmmm internal server error, ${err}`);
+    }
   }
 }

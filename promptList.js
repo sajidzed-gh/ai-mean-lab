@@ -25,6 +25,23 @@ const createPromptList = (gitdiffExample) => {
         `,
       },
     ],
+    promptGitHunk: [
+      {
+        role: 'system',
+        content: `You are a Senior Software Engineer. I will provide you with code "hunks" (git diffs) from a recent push.`,
+      },
+      {
+        role: 'user',
+        content: ` Your task:
+      1. Provide a high-level summary of WHAT changed and WHY (contextual logic).
+      2. Identify any potential bugs, performance issues, or Angular anti-patterns.
+      3. Keep the tone professional, concise, and helpful.
+
+      CODE CHANGES:
+      ${gitdiffExample}
+`,
+      },
+    ],
   };
 
   return (key) => {
