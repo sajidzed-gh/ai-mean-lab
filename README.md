@@ -1,6 +1,6 @@
-# AI MEAN Lab (ng-project)
+# AI MEAN Lab
 
-Welcome to the **AI MEAN Lab** repository. This project serves as a laboratory environment integrating an **Angular** frontend, **Express / Node.js** backends, a **NestJS** API layer, and **AI integrations** powered by Groq SDK, WebSockets, and Model Context Protocol (MCP) tooling. 
+Welcome to the **AI MEAN Lab** repository. This project serves as a laboratory environment integrating an **Angular** frontend, **Express / Node.js** backends, a **NestJS** API layer, and **AI integrations** powered by Groq SDK, WebSockets, Model Context Protocol (MCP) tooling, streams, chunking, Webhooks etc. 
 
 ---
 
